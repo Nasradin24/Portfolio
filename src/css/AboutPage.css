@@ -1,0 +1,58 @@
+.all-about-section{
+    background-color: ghostwhite;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.first_line {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+  
+.image-line img {
+    width: 250px;
+    height: auto;
+}
+  
+.text_line {
+    margin-left: 20px;
+}
+  
+.text_line p {
+    color: #333;
+    font-size: 1.3rem;
+    max-width: 700px;
+    text-align: left; 
+    letter-spacing: 1px; 
+    line-height: 1.6;
+}  
+
+/* AboutPage.css */
+.all-about-section {
+    background-color: inherit; /* Inherit from body */
+    color: inherit; /* Inherit text color */
+  }
+  
+  .text-center {
+    color: inherit;
+  }
+  
+  /* Customize if needed for dark mode */
+  body.dark-mode .all-about-section {
+    background-color: #333; /* Darker background */
+  }
+  
+
+@media screen and (min-width: 992px) {
+    .all-about-section container {
+      max-width: 100%;
+    }
+  }
+@media screen and (max-width: 768px) {
+    .all-about-section {
+      max-width: 100%;
+      padding: 20px;
+    }
+}  

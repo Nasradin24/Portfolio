@@ -1,0 +1,40 @@
+.experience{
+    background-color: ghostwhite;
+}
+
+.experience-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+  
+.experience-page h2 {
+    font-size: 2rem;
+    color: #333;
+}
+  
+.experience-page ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+  
+.experience-page ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+
+/* Experience.css */
+.experience {
+    background-color: inherit;
+    color: inherit;
+  }
+  
+  h2, h3, h5 {
+    color: inherit;
+  }
+  
+  /* Dark Mode specific styles */
+  body.dark-mode .experience {
+    background-color: #333;
+  }
+  

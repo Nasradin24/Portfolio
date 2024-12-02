@@ -1,0 +1,733 @@
+// import React, { useState } from "react";
+// import "./App.css";
+// import { Routes, Route } from "react-router-dom";
+// import { useSelector, useDispatch } from "react-redux";
+// import { increment, decrement } from "./redux/counterSlice";
+// import Header from "./components/Header";
+// import AboutPage from "./pages/AboutPage.jsx";
+// import Experience from "./pages/Experience";
+// import Skills from "./pages/Skills";
+// import ContactPage from "./pages/ContactPage";
+// import Footer from "./components/Footer";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faSun,
+//   faArrowDown,
+//   faHandPaper,
+//   faLocationDot,
+// } from "@fortawesome/free-solid-svg-icons";
+// import {
+//   faGithub,
+//   faGoogle,
+//   faLinkedin,
+// } from "@fortawesome/free-brands-svg-icons";
+// import myCv from "./assets/Nasradin_20241104_210659_0000.pdf";
+// import myimg from "./assets/images/image.jpeg";
+// import { Container, Row, Col, Button, Navbar, Nav } from "react-bootstrap";
+
+// function App() {
+//   const dispatch = useDispatch();
+//   const { value } = useSelector((store) => store.counter);
+
+//   const [darkMode, setDarkMode] = useState(false);
+
+//   const handleToggleDarkMode = () => {
+//     setDarkMode(!darkMode);
+//   };
+
+//   const appClass = darkMode ? "dark-mode" : "";
+
+//   return (
+//     <div className={appClass}>
+//       <Navbar bg="light" expand="lg" className="navbar-section" style={{ maxWidth: "100%" }}>
+//         <Container>
+//           <Navbar.Brand href="#home">Portfolio</Navbar.Brand>
+//           <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//           <Navbar.Collapse id="basic-navbar-nav">
+//             <Nav className="ms-auto">
+//               <Nav.Link href="#about">About</Nav.Link>
+//               <Nav.Link href="#skills">Skills</Nav.Link>
+//               <Nav.Link href="#experience">Experience</Nav.Link>
+//               <Nav.Link href="#contact">Contact</Nav.Link>
+//               <Nav.Link>
+//                 <FontAwesomeIcon
+//                   icon={faSun}
+//                   style={{
+//                     marginLeft: "10px",
+//                     cursor: "pointer",
+//                     fontSize: "24px",
+//                     color: darkMode ? "#FFD700" : "#000",
+//                   }}
+//                   onClick={handleToggleDarkMode}
+//                 />
+//               </Nav.Link>
+//               <Nav.Link href={myCv} download>
+//                 <Button variant="primary">
+//                   Download CV
+//                   <FontAwesomeIcon
+//                     icon={faArrowDown}
+//                     style={{ marginLeft: "10px", color: "white" }}
+//                   />
+//                 </Button>
+//               </Nav.Link>
+//             </Nav>
+//           </Navbar.Collapse>
+//         </Container>
+//       </Navbar>
+//       <Container className="header_main py-5" style={{ maxWidth: "100%" }}>   
+//         <Row>
+//           <Col xs={12} md={6} className="left-line">
+//             <h2>
+//               Hi, I'm Guseinovi Nasradin <FontAwesomeIcon icon={faHandPaper} />
+//             </h2>
+//             <p>I'm a junior-level Frontend Developer | React & Node.js</p>
+//             <div className="location">
+//               <FontAwesomeIcon icon={faLocationDot} />
+//               <span> Baku, Azerbaijan</span>
+//             </div>
+//             <div className="social mt-3">
+//               <a
+//                 href="https://github.com/Nasradin24?tab=repositories"
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 className="me-3"
+//               >
+//                 <FontAwesomeIcon
+//                   icon={faGithub}
+//                   style={{ fontSize: "24px", marginRight: "10px" }}
+//                 />
+//                 Github
+//               </a>
+//               <a
+//                 href="https://mail.google.com/mail/u/0/#inbox"
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 className="me-3"
+//               >
+//                 <FontAwesomeIcon
+//                   icon={faGoogle}
+//                   style={{
+//                     fontSize: "24px",
+//                     marginRight: "10px",
+//                     color: "#db4437",
+//                   }}
+//                 />
+//                 Gmail
+//               </a>
+//               <a
+//                 href="https://www.linkedin.com/in/nasradin-guseinovi-1a3639323/"
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//               >
+//                 <FontAwesomeIcon
+//                   icon={faLinkedin}
+//                   style={{ fontSize: "24px", marginRight: "10px" }}
+//                 />
+//                 Linkedin
+//               </a>
+//             </div>
+//           </Col>
+//           <Col xs={12} md={6} className="right-line">
+//             <img src={myimg} alt="Nasradin's Profile" className="img-fluid" />
+//           </Col>
+//         </Row>
+//       </Container>
+//       <Header />
+//       <AboutPage />
+//       <Skills />
+//       <Experience />
+//       <Routes>
+//         <Route path="/" element={<Header />} />
+//         <Route path="/experience" element={<Experience />} />
+//         <Route path="/projects" element={<Skills />} />
+//         <Route path="/contact" element={<ContactPage />} />
+//       </Routes>
+//       <Footer />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+
+
+
+
+
+
+// import React, { useState } from "react";
+// import "./App.css";
+// import { Routes, Route } from "react-router-dom";
+// import { useSelector, useDispatch } from "react-redux";
+// import { increment, decrement } from "./redux/counterSlice";
+// import Header from "./components/Header";
+// import AboutPage from "./pages/AboutPage.jsx";
+// import Experience from "./pages/Experience";
+// import Skills from "./pages/Skills";
+// import ContactPage from "./pages/ContactPage";
+// import Footer from "./components/Footer";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faSun, faArrowDown, faHandPaper, faLocationDot,} from "@fortawesome/free-solid-svg-icons";
+// import { faGithub, faGoogle, faLinkedin,} from "@fortawesome/free-brands-svg-icons";
+// import myCv from "./assets/Nasradin_20241104_210659_0000.pdf";
+// import myimg from "./assets/images/image.jpeg";
+// import { Container, Row, Col, Button, Navbar, Nav } from "react-bootstrap";
+// import { Link } from "react-scroll";
+// import "./i18n.jsx";
+
+// function App() {
+//   const dispatch = useDispatch();
+//   const { value } = useSelector((store) => store.counter);
+
+//   const [darkMode, setDarkMode] = useState(false);
+
+//   const handleToggleDarkMode = () => {
+//     setDarkMode(!darkMode);
+//   };
+
+//   const appClass = darkMode ? "dark-mode" : "";
+
+//   return (
+//     <div className={appClass}>
+//       <Navbar
+//         expand="lg"
+//         className="navbar-section"
+//         style={{
+//           position: "fixed",
+//           top: 0,
+//           width: "100%",
+//           zIndex: 10,
+//         }}
+//       >
+//         <Container>
+//           <Link to="header" smooth={true} duration={500}>
+//             <Navbar.Brand
+//               className="navbar-brand"
+//               style={{ cursor: "pointer" }}
+//             >
+//               Portfolio
+//             </Navbar.Brand>
+//           </Link>
+//           <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//           <Navbar.Collapse id="basic-navbar-nav">
+//             <Nav className="ms-auto">
+//               <Nav className="ms-auto navbar-nav">
+//                 <li>
+//                   <Link to="about" smooth={true} duration={500}>
+//                     <Nav.Link>About</Nav.Link>
+//                   </Link>
+//                 </li>
+//                 <li>
+//                   <Link to="skills" smooth={true} duration={500}>
+//                     <Nav.Link>Skills</Nav.Link>
+//                   </Link>
+//                 </li>
+//                 <li>
+//                   <Link to="experience" smooth={true} duration={500}>
+//                     <Nav.Link>Experience</Nav.Link>
+//                   </Link>
+//                 </li>
+//                 <li>
+//                   <Link to="contact" smooth={true} duration={500}>
+//                     <Nav.Link>Contact</Nav.Link>
+//                   </Link>
+//                 </li>
+//               </Nav>
+//               <Nav.Link>
+//                 <FontAwesomeIcon
+//                   icon={faSun}
+//                   style={{
+//                     marginLeft: "10px",
+//                     cursor: "pointer",
+//                     fontSize: "24px",
+//                     color: darkMode ? "#FFD700" : "#000",
+//                     paddingTop: "20px",
+//                   }}
+//                   onClick={handleToggleDarkMode}
+//                 />
+//               </Nav.Link>
+//               <Nav.Link href={myCv} download>
+//                 <Button variant="primary" style={{marginTop: "15px"}}>
+//                   Download CV
+//                   <FontAwesomeIcon
+//                     icon={faArrowDown}
+//                     style={{ padding:"3px" ,color: "white", }}
+//                   />
+//                 </Button>
+//               </Nav.Link>
+//             </Nav>
+//           </Navbar.Collapse>
+//         </Container>
+//       </Navbar>
+//       <div
+//         id="header"
+//         className="header_main py-5"
+//         style={{ maxWidth: "100%", display: "flex", flexDirection: "column" }}
+//       >
+//         <Container>
+//           <Row style={{ maxWidth: "1280px" }}>
+//             <Col xs={12} md={6} className="left-line">
+//               <h2>
+//                 Hi, I'm Guseinovi Nasradin{" "}
+//                 <FontAwesomeIcon icon={faHandPaper} />
+//               </h2>
+//               <p>I'm a junior-level Frontend Developer | React & Node.js</p>
+//               <div className="location">
+//                 <FontAwesomeIcon icon={faLocationDot} />
+//                 <span> Baku, Azerbaijan</span>
+//               </div>
+//               <div className="social mt-3">
+//                 <a
+//                   href="https://github.com/Nasradin24?tab=repositories"
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                   className="me-3"
+//                 >
+//                   <FontAwesomeIcon
+//                     icon={faGithub}
+//                     style={{ fontSize: "24px", marginRight: "10px" }}
+//                   />
+//                   Github
+//                 </a>
+//                 <a
+//                   href="https://mail.google.com/mail/u/0/#inbox"
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                   className="me-3"
+//                 >
+//                   <FontAwesomeIcon
+//                     icon={faGoogle}
+//                     style={{
+//                       fontSize: "24px",
+//                       marginRight: "10px",
+//                       color: "#db4437",
+//                     }}
+//                   />
+//                   Gmail
+//                 </a>
+//                 <a
+//                   href="https://www.linkedin.com/in/nasradin-guseinovi-1a3639323/"
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                 >
+//                   <FontAwesomeIcon
+//                     icon={faLinkedin}
+//                     style={{ fontSize: "24px", marginRight: "10px" }}
+//                   />
+//                   Linkedin
+//                 </a>
+//               </div>
+//             </Col>
+//             <Col xs={12} md={6} className="right-line">
+//               <img src={myimg} alt="Nasradin's Profile" className="img-fluid" />
+//             </Col>
+//           </Row>
+//         </Container>
+//       </div>
+//       <div id="about">
+//         <AboutPage />
+//       </div>
+//       <div id="skills">
+//         <Skills />
+//       </div>
+//       <div id="experience">
+//         <Experience />
+//       </div>
+//       <div id="contact">
+//         <ContactPage />
+//       </div>
+//       <Routes>
+//         <Route path="/" element={<Header />} />
+//         <Route path="/experience" element={<Experience />} />
+//         <Route path="/projects" element={<Skills />} />
+//         <Route path="/contact" element={<ContactPage />} />
+//       </Routes>
+//       <Footer />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// import React, { useState } from "react";
+// import "./App.css";
+// import { Routes, Route } from "react-router-dom";
+// import { useTranslation } from "react-i18next";
+// import "./i18n.jsx";
+// import { Container, Row, Col, Navbar, Nav, Dropdown } from "react-bootstrap";
+// import Header from "./components/Header";
+// import AboutPage from "./pages/AboutPage.jsx";
+// import Experience from "./pages/Experience";
+// import Skills from "./pages/Skills";
+// import ContactPage from "./pages/ContactPage";
+// import Footer from "./components/Footer";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faHandPaper, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+// import { faGithub, faGoogle, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+// import myimg from "./assets/images/image.jpeg";
+
+// function App() {
+//   const { t, i18n } = useTranslation();
+//   const [darkMode, setDarkMode] = useState(false);
+
+//   const handleToggleDarkMode = () => {
+//     setDarkMode(!darkMode);
+//   };
+
+//   const handleLanguageChange = (lang) => {
+//     i18n.changeLanguage(lang);
+//   };
+
+//   const appClass = darkMode ? "dark-mode" : "";
+
+//   return (
+//     <div className={appClass}>
+//       <Navbar
+//         expand="lg"
+//         className="navbar-section"
+//         style={{
+//           position: "fixed",
+//           top: 0,
+//           width: "100%",
+//           zIndex: 10,
+//         }}
+//       >
+//         <Container>
+//           <Navbar.Brand className="navbar-brand" style={{ cursor: "pointer" }}>
+//             Portfolio
+//           </Navbar.Brand>
+//           <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//           <Navbar.Collapse id="basic-navbar-nav">
+//             <Nav className="ms-auto">
+//               <li>
+//                 <Nav.Link href="#about">{t("about")}</Nav.Link>
+//               </li>
+//               <li>
+//                 <Nav.Link href="#skills">{t("skills")}</Nav.Link>
+//               </li>
+//               <li>
+//                 <Nav.Link href="#experience">{t("experience")}</Nav.Link>
+//               </li>
+//               <li>
+//                 <Nav.Link href="#contact">{t("contact")}</Nav.Link>
+//               </li>
+//               {/* Language Selector Dropdown */}
+//               <Dropdown as="li" className="nav-item">
+//                 <Dropdown.Toggle
+//                   as={Nav.Link}
+//                   id="dropdown-custom-components"
+//                   style={{ cursor: "pointer" }}
+//                 >
+//                   {t("language")}
+//                 </Dropdown.Toggle>
+//                 <Dropdown.Menu>
+//                   <Dropdown.Item onClick={() => handleLanguageChange("en")}>
+//                     English
+//                   </Dropdown.Item>
+//                   <Dropdown.Item onClick={() => handleLanguageChange("az")}>
+//                     Azərbaycan
+//                   </Dropdown.Item>
+//                   <Dropdown.Item onClick={() => handleLanguageChange("ge")}>
+//                     ქართული
+//                   </Dropdown.Item>
+//                   <Dropdown.Item onClick={() => handleLanguageChange("pln")}>
+//                     Polski
+//                   </Dropdown.Item>
+//                 </Dropdown.Menu>
+//               </Dropdown>
+//             </Nav>
+//           </Navbar.Collapse>
+//         </Container>
+//       </Navbar>
+
+//       {/* Header Section */}
+//       <div
+//         id="header"
+//         className="header_main py-5"
+//         style={{ maxWidth: "100%", display: "flex", flexDirection: "column" }}
+//       >
+//         <Container>
+//           <Row style={{ maxWidth: "1280px" }}>
+//             <Col xs={12} md={6} className="left-line">
+//               <h2>
+//                 Hi, I'm Guseinovi Nasradin{" "}
+//                 <FontAwesomeIcon icon={faHandPaper} />
+//               </h2>
+//               <p>I'm a junior-level Frontend Developer | React & Node.js</p>
+//               <div className="location">
+//                 <FontAwesomeIcon icon={faLocationDot} />
+//                 <span> Baku, Azerbaijan</span>
+//               </div>
+//               <div className="social mt-3">
+//                 <a
+//                   href="https://github.com/Nasradin24?tab=repositories"
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                   className="me-3"
+//                 >
+//                   <FontAwesomeIcon
+//                     icon={faGithub}
+//                     style={{ fontSize: "24px", marginRight: "10px" }}
+//                   />
+//                   Github
+//                 </a>
+//                 <a
+//                   href="https://mail.google.com/mail/u/0/#inbox"
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                   className="me-3"
+//                 >
+//                   <FontAwesomeIcon
+//                     icon={faGoogle}
+//                     style={{
+//                       fontSize: "24px",
+//                       marginRight: "10px",
+//                       color: "#db4437",
+//                     }}
+//                   />
+//                   Gmail
+//                 </a>
+//                 <a
+//                   href="https://www.linkedin.com/in/nasradin-guseinovi-1a3639323/"
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                 >
+//                   <FontAwesomeIcon
+//                     icon={faLinkedin}
+//                     style={{ fontSize: "24px", marginRight: "10px" }}
+//                   />
+//                   Linkedin
+//                 </a>
+//               </div>
+//             </Col>
+//             <Col xs={12} md={6} className="right-line">
+//               <img src={myimg} alt="Nasradin's Profile" className="img-fluid" />
+//             </Col>
+//           </Row>
+//         </Container>
+//       </div>
+//       <div id="about">
+//         <AboutPage />
+//       </div>
+//       <div id="skills">
+//         <Skills />
+//       </div>
+//       <div id="experience">
+//         <Experience />
+//       </div>
+//       <div id="contact">
+//         <ContactPage />
+//       </div>
+
+//       <Routes>
+//         <Route path="/" element={<Header />} />
+//         <Route path="/experience" element={<Experience />} />
+//         <Route path="/projects" element={<Skills />} />
+//         <Route path="/contact" element={<ContactPage />} />
+//       </Routes>
+//       <Footer />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+
+
+
+
+
+
+// import React, { useState } from "react";
+// import "./App.css";
+// import { Routes, Route } from "react-router-dom";
+// import { useTranslation } from "react-i18next";
+// import "./i18n.jsx";
+// import { Container, Row, Col, Navbar, Nav, Dropdown } from "react-bootstrap";
+// import Header from "./components/Header";
+// import AboutPage from "./pages/AboutPage.jsx";
+// import Experience from "./pages/Experience";
+// import Skills from "./pages/Skills";
+// import ContactPage from "./pages/ContactPage";
+// import Footer from "./components/Footer";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faHandPaper, faLocationDot, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+// import { faGithub, faGoogle, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+// import myimg from "./assets/images/image.jpeg";
+
+// function App() {
+//   const { t, i18n } = useTranslation();
+//   const [darkMode, setDarkMode] = useState(false);
+
+//   const handleToggleDarkMode = () => {
+//     setDarkMode(!darkMode);
+//   };
+
+//   const handleLanguageChange = (lang) => {
+//     i18n.changeLanguage(lang);
+//   };
+
+//   const appClass = darkMode ? "dark-mode" : "";
+
+//   return (
+//     <div className={appClass}>
+//       <Navbar
+//         expand="lg"
+//         className="navbar-section"
+//         style={{
+//           position: "fixed",
+//           top: 0,
+//           width: "100%",
+//           zIndex: 10,
+//         }}
+//       >
+//         <Container>
+//           <Navbar.Brand className="navbar-brand" style={{ cursor: "pointer" }}>
+//             Portfolio
+//           </Navbar.Brand>
+//           <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//           <Navbar.Collapse id="basic-navbar-nav">
+//             <Nav className="ms-auto">
+//               <li>
+//                 <Nav.Link href="#about">{t("about")}</Nav.Link>
+//               </li>
+//               <li>
+//                 <Nav.Link href="#skills">{t("skills")}</Nav.Link>
+//               </li>
+//               <li>
+//                 <Nav.Link href="#experience">{t("experience")}</Nav.Link>
+//               </li>
+//               <li>
+//                 <Nav.Link href="#contact">{t("contact")}</Nav.Link>
+//               </li>
+//               <Dropdown as="li" className="nav-item">
+//                 <Dropdown.Toggle
+//                   as={Nav.Link}
+//                   id="dropdown-custom-components"
+//                   style={{ cursor: "pointer" }}
+//                 >
+//                   {t("languages")}
+//                 </Dropdown.Toggle>
+//                 <Dropdown.Menu>
+//                   <Dropdown.Item onClick={() => handleLanguageChange("en")}>
+//                     English
+//                   </Dropdown.Item>
+//                   <Dropdown.Item onClick={() => handleLanguageChange("az")}>
+//                     Azərbaycan
+//                   </Dropdown.Item>
+//                   <Dropdown.Item onClick={() => handleLanguageChange("ge")}>
+//                     ქართული
+//                   </Dropdown.Item>
+//                   <Dropdown.Item onClick={() => handleLanguageChange("pln")}>
+//                     Polski
+//                   </Dropdown.Item>
+//                 </Dropdown.Menu>
+//               </Dropdown>
+//               <li>
+//                 <Nav.Link onClick={handleToggleDarkMode} style={{ cursor: "pointer" }}>
+//                   {darkMode ? (
+//                     <FontAwesomeIcon icon={faSun} />
+//                   ) : (
+//                     <FontAwesomeIcon icon={faMoon} />
+//                   )}
+//                 </Nav.Link>
+//               </li>
+//             </Nav>
+//           </Navbar.Collapse>
+//         </Container>
+//       </Navbar>
+//       <div
+//         id="header"
+//         className="header_main py-5"
+//         style={{ maxWidth: "100%", display: "flex", flexDirection: "column" }}
+//       >
+//         <Container>
+//           <Row style={{ maxWidth: "1280px" }}>
+//             <Col xs={12} md={6} className="left-line">
+//               <h2>
+//                 Hi, I'm Guseinovi Nasradin{" "}
+//                 <FontAwesomeIcon icon={faHandPaper} />
+//               </h2>
+//               <p>I'm a junior-level Frontend Developer | React & Node.js</p>
+//               <div className="location">
+//                 <FontAwesomeIcon icon={faLocationDot} />
+//                 <span> Baku, Azerbaijan</span>
+//               </div>
+//               <div className="social mt-3">
+//                 <a
+//                   href="https://github.com/Nasradin24?tab=repositories"
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                   className="me-3"
+//                 >
+//                   <FontAwesomeIcon
+//                     icon={faGithub}
+//                     style={{ fontSize: "24px", marginRight: "10px" }}
+//                   />
+//                   Github
+//                 </a>
+//                 <a
+//                   href="https://mail.google.com/mail/u/0/#inbox"
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                   className="me-3"
+//                 >
+//                   <FontAwesomeIcon
+//                     icon={faGoogle}
+//                     style={{
+//                       fontSize: "24px",
+//                       marginRight: "10px",
+//                       color: "#db4437",
+//                     }}
+//                   />
+//                   Gmail
+//                 </a>
+//                 <a
+//                   href="https://www.linkedin.com/in/nasradin-guseinovi-1a3639323/"
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                 >
+//                   <FontAwesomeIcon
+//                     icon={faLinkedin}
+//                     style={{ fontSize: "24px", marginRight: "10px" }}
+//                   />
+//                   Linkedin
+//                 </a>
+//               </div>
+//             </Col>
+//             <Col xs={12} md={6} className="right-line">
+//               <img src={myimg} alt="Nasradin's Profile" className="img-fluid" />
+//             </Col>
+//           </Row>
+//         </Container>
+//       </div>
+
+//       <div id="about">
+//         <AboutPage />
+//       </div>
+//       <div id="skills">
+//         <Skills />
+//       </div>
+//       <div id="experience">
+//         <Experience />
+//       </div>
+//       <div id="contact">
+//         <ContactPage />
+//       </div>
+
+//       <Routes>
+//         <Route path="/" element={<Header />} />
+//         <Route path="/experience" element={<Experience />} />
+//         <Route path="/projects" element={<Skills />} />
+//         <Route path="/contact" element={<ContactPage />} />
+//       </Routes>
+//       <Footer />
+//     </div>
+//   );
+// }
+
+// export default App;

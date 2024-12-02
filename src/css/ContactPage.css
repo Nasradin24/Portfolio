@@ -1,0 +1,136 @@
+.contact-all-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    height: 75vh;           
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+h2{
+    color: white;
+}
+
+h3{
+    color: white;
+    font-size: 2rem;
+}
+span{
+    color: white;
+    font-size: 1rem;
+}
+
+.number{
+    display: flex;
+    justify-content: end;
+    gap: 125px;
+}
+
+.number h3{
+    display: flex;
+    justify-content: space-between;
+}
+  
+.number-inside {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 10px;
+}
+
+.gmail{
+    display: flex;
+    justify-content: space-between;
+    gap: 125px;
+}
+
+.gmail h3{
+    display: flex;
+    justify-content: space-between; 
+}
+  
+.gmail-inside {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 10px;
+}
+
+.location h3{
+    display: flex;
+    justify-content: space-between;
+}
+  
+.location-inside {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 10px;
+}
+  
+.phone {
+    cursor: pointer;
+    color: yellow;
+}
+  
+.gmail-icon {
+    cursor: pointer;
+    color: white;
+}
+  
+.location-icon {
+    cursor: pointer;
+    color: red;
+}
+
+.contact-all-page {
+    text-align: center;
+    padding: 2rem;
+}
+  
+.contact-all-inside {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+  
+.number, .gmail, .location {
+    margin-bottom: 2rem;
+}
+  
+.number-inside, .gmail-inside, .location-inside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+  
+.phone, .gmail-icon, .location-icon {
+    margin-right: 10px;
+    color: #007bff;
+}
+  
+span {
+    font-size: 16px;
+    color: #555;
+}
+
+
+/* ContactPage.css */
+.contact-page {
+    background-color: inherit;
+    color: inherit;
+  }
+  
+  .contact-title,
+  .contact-subtitle {
+    color: inherit; /* Inherit text color */
+  }
+  
+  /* Dark Mode specific styles */
+  body.dark-mode .contact-page {
+    background-color: #333; /* Darker background */
+  }
+  
